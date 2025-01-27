@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>QUIZ 1</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        #header {
+            border: 2px solid black;
+            padding: 10px;
+            width: fit-content;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+    	    <div id="header">
+        <h1>If a = 20 and b = 5, compute for the following:</h1>
+
+    </div>
+
+        <h2>Arithmetic Operator</h2>
+        <p>a. Exponent</p>
+        <p>b. Mod</p>
+        <p id="arithmetic"></p>
+
+        <button type="button" class="btn btn-primary" onclick="showArithmetic()">Show Answer</button>
+
+        <script>
+
+        function showArithmetic() {
+
+        let a = 20;
+        let b = 5;
+        let exponent = a ** b;
+        let mod = a % b;
+
+        document.getElementById("arithmetic").innerHTML =
+            "Exponent: " + exponent + "<br>" +
+            "Mod: " + mod;
+    } </script>
+
+    </div>
+
+    <div class="container">
+
+        <h2>Comparison Operator</h2>
+        <p>a. Is a greater than b?</p>
+        <p>b. Is a equal to b?</p>
+
+        <p id="comparison"></p>
+        <button type="button" class="btn btn-primary" onclick="showComparison()">Show Answer</button>
+
+        <script>
+
+        function showComparison() {
+
+        let a = 20;
+        let b = 5;
+        let isGreaterThan = a > b;
+        let isEqual = a == b;
+
+        document.getElementById("comparison").innerHTML =
+            "Is a greater than b?: " + isGreaterThan + "<br>" +
+            "Is a equal to b?: " + isEqual;
+    }
+</script>
+
+    </div>
+
+    <div class="container">
+
+        <h2>Logical Operator</h2>
+        <p>a. (a <= b) && (a >= b)</p>
+        <p>b. (a != b) || (a == b)</p>
+
+        <p id="logical"></p>
+        <button type="button" class="btn btn-primary" onclick="showLogical()">Show Answer</button>
+        <script>
+
+    function showLogical() {
+
+        let a = 20;
+        let b = 5;
+        let False = (a <= b) && (a >= b);
+        let True = (a != b) || (a == b);
+
+        document.getElementById("logical").innerHTML =
+            "(a <= b) && (a >= b): " + False + "<br>" +
+            "(a != b) || (a == b): " + True;
+    }
+</script>
+
+    </div>
+
+</body>
+</html>
